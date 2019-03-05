@@ -25,9 +25,12 @@ def getAnswer(answerNumber):
 
 #calls randint function from random module with two arguments
 #r evaluates to a random integer between 1 and 9, including 1 and 9
-r = random.randint(1, 9)
+#r = random.randint(1, 9)
 #calls the getAnswer function with r as the argument
 #returned string from getAnswer is assiged to the fortune variable.
-fortune = getAnswer(r)
+#fortune = getAnswer(r)
 #prints fortune variable
-print(fortune)
+#print(fortune)
+
+#shorten the part where you call the function and print it to one line
+print(getAnswer(random.randint(1,9)))
