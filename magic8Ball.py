@@ -3,6 +3,7 @@ import random
 
 #defines getAnswer function
 def getAnswer(answerNumber):
+    #program execution selects a number based on the value of 4
     if answerNumber == 1:
         return 'It is certain'
     elif answerNumber == 2:
@@ -26,6 +27,7 @@ def getAnswer(answerNumber):
 #r evaluates to a random integer between 1 and 9, including 1 and 9
 r = random.randint(1, 9)
 #calls the getAnswer function with r as the argument
+#returned string from getAnswer is assiged to the fortune variable.
 fortune = getAnswer(r)
-print(r)
+#prints fortune variable
 print(fortune)
