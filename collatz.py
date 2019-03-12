@@ -15,6 +15,9 @@ def collatz(number):
 
 i = input("Please enter an integer: ")
 
-while i != 1:
-    i = collatz(i)
-    print(i)
+try:
+    while i != 1:
+        i = collatz(i)
+        print(i)
+except ValueError:
+    print('You should enter an integer.')
