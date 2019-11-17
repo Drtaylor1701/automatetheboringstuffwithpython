@@ -8,13 +8,11 @@ grid = [['.', '.', '.', '.', '.', '.'],
         ['.', 'O', 'O', '.', '.', '.'],
         ['.', '.', '.', '.', '.', '.']]
 
-x = 0
-y = 0
 
-for column in grid:
-    for character in column:
-        print(grid[x][y], end=" ")
-        y += 1
-    print('\n', end=" ")
+def gridOutput(grid):
+    for s in range(len(grid[0])):
+        print()
+        for i in range(len(grid)):
+            print(grid[i][s], end='')
 
-
+gridOutput(grid)
