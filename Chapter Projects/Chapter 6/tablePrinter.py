@@ -5,7 +5,7 @@ def printTable(tableData):
     print(colWidths)
 
     listIndex = 0
-    for list in tableData:
+    for entry in tableData:
         colWidths[listIndex] = max(len(x) for x in tableData[listIndex])
         listIndex += 1
 
@@ -15,13 +15,31 @@ def printTable(tableData):
     for entry in tableData:
         for item in entry:
             outputTable.append(item)
-    
-    return outputTable
-    padding = " "
-    index = 0
-    for list in tableData:
-        print(list[0]) + (padding * (maxlen(list[index])), end='')
 
+    colWidth = max(colWidths)
+    padding = " "
+    newOutputTable = []
+
+    for entry in tableData:
+        if len(item) > colWidth:
+            extraSpace = colWidth - len(item)
+            item = item + padding * extraSpace
+            newOutputTable.append(item)
+    
+    print(newOutputTable)
+
+    
+    print(outputTable)
+    rows = len(outputTable)/len(tableData)
+    rows = int(rows)
+    columns = len(tableData)
+    print(rows)
+    print(columns)
+
+    base = 0
+    for i in range(rows):
+        print(outputTable[base], outputTable[base + rows], outputTable[base + (rows * 2)])
+        base += 1
 
 tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
