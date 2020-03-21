@@ -14,21 +14,8 @@ def printTable(tableData):
     outputTable = []
     for entry in tableData:
         for item in entry:
-            outputTable.append(item)
-
-    colWidth = max(colWidths)
-    padding = " "
-    newOutputTable = []
-
-    for entry in tableData:
-        if len(item) > colWidth:
-            extraSpace = colWidth - len(item)
-            item = item + padding * extraSpace
-            newOutputTable.append(item)
-    
-    print(newOutputTable)
-
-    
+            outputTable.append(item.rjust(8))
+            
     print(outputTable)
     rows = len(outputTable)/len(tableData)
     rows = int(rows)
