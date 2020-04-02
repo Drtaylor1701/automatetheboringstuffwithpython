@@ -5,13 +5,13 @@ import pyperclip, re
 #creates two regexes
 #one regex matches phone numbers
 phoneRegex = re.compile(r'''(
-    (\d{3}|(\d{3}\))?               #area code
-    (\s|-|\.)?                      #separator
-    (\d{3})                         #first 3 digits
-    (\s|-|\.)                       #separator
-    (\d{4})                         #last 4 digits
-    (\s*(ext|x|ext.)\s*(\d{2,5}))?  #extension
-    )''',re.VERBOSE)
+    (\d{3}|\(\d{3}\))?                # area code
+    (\s|-|\.)?                        # separator
+    (\d{3})                           # first 3 digits
+    (\s|-|\.)                         # separator
+    (\d{4})                           # last 4 digits
+    (\s*(ext|x|ext.)\s*(\d{2,5}))?    # extension
+    )''', re.VERBOSE)
 
 #one regex matches email addresses
 emailRegex = re.compile(r'''(
