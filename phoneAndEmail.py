@@ -18,7 +18,7 @@ emailRegex = re.compile(r'''(
     [a-zA-Z0-9._%+-]+   #username
     @                   #@ symbol
     [a-zA-Z0-9.-]+   #domain
-    (\.[a-zAZ{2.4}])    #dot-something
+    (\.[a-zAZ{2,4}])    #dot-something
     )''',re.VERBOSE)
 
 #find all matches to both regexes
@@ -41,6 +41,5 @@ if len(matches) > 0:
     print('Copied to clipboard:')
     print('\n'.join(matches))
 else:
+    #display a message if no matches are found
     print('No phone nummbers or email addresses found.')
-
-#display a message if no matches are found
