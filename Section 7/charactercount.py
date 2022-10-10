@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
+'''following along with the character count exercise'''
 
 from itertools import count
 
+MESSAGE = "It was a bright cold day in April, and the clocks were striking thirteen"
 
-message = "It was a bright cold day in April, and the clocks were striking thirteen"
+count = {}
 
-count = {} 
-
-for character in message.upper():
+for character in MESSAGE.upper():
     count.setdefault(character, 0)
     count[character] = count[character] + 1
 
